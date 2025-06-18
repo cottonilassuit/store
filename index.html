@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>قطونيل - فرع أسيوط | المنتجات</title>
+    <title>قطونيل - فرع أسيوط | المتجر الرسمي</title>
     
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-    <header>
+    <header id="main-header">
         <div class="container">
             <div class="logo">قطونيل <span>- فرع أسيوط</span></div>
             <nav class="main-nav">
@@ -40,34 +40,20 @@
 
         <section id="products">
             <div class="container">
-                <h2 class="reveal">القطن بيتكلم مصري </h2>
+                <h2 class="reveal">صُنعت لراحتك</h2>
                 
-                <!-- NEW: Search and Filter controls container -->
                 <div class="controls-container reveal">
                     <input type="search" id="search-input" placeholder="ابحث عن منتج بالاسم..." aria-label="ابحث عن منتج">
-                    <div class="filter-buttons">
-                        <!-- Filter buttons will be populated by JavaScript -->
-                    </div>
+                    <div class="filter-buttons"></div>
                 </div>
                 
-                <!-- Product gallery for items WITH images -->
-                <div class="product-gallery">
-                    <!-- Products with images will be populated here by JavaScript -->
-                </div>
-
-                <!-- NEW: Section for products WITHOUT images -->
-                <div class="no-image-products-section" id="no-image-section" style="display: none;">
-                    <h2 class="reveal">منتجات إضافية</h2>
-                    <div class="no-image-gallery">
-                        <!-- Products without images will be populated here by JavaScript -->
-                    </div>
-                </div>
+                <div class="product-gallery"></div>
 
             </div>
         </section>
 
         <section id="contact" class="skewed-bg">
-            <div class="container reveal">
+             <div class="container reveal">
                 <h2 class="reveal">نحن في انتظارك</h2>
                 <div class="contact-content">
                     <div class="contact-info">
@@ -89,7 +75,22 @@
         <p>© 2025 قطونيل - فرع أسيوط. تم التصميم والتطوير بحب وشغف 🔥</p>
     </footer>
 
-    <!-- SCRIPT LOADING ORDER IS IMPORTANT: DATA FIRST, THEN LOGIC -->
+    <div id="product-modal-overlay" class="modal-overlay"></div>
+    <div id="product-modal" class="modal">
+        <button class="modal-close-btn" id="modal-close-btn">×</button>
+        <div class="modal-content">
+            <div class="modal-image-container">
+                <div class="modal-slider-images"></div>
+            </div>
+            <div class="modal-info">
+                <h3 id="modal-product-name"></h3>
+                <p id="modal-product-price" class="product-price"></p>
+                <div id="modal-product-details" class="product-details"></div>
+                <a href="#" id="modal-order-btn" class="btn" target="_blank">اطلبه الآن عبر واتساب</a>
+            </div>
+        </div>
+    </div>
+    
     <script src="js/products.js"></script>
     <script src="js/main.js"></script>
 </body>
