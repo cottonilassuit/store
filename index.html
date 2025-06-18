@@ -3,18 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>قوطنيل - فرع أسيوط | المنتجات</title>
+    <title>قطونيل - فرع أسيوط | المنتجات</title>
     
-    <!-- 🥷⚔️🖤🔥 START: CSS STYLES (No Changes Here) 🥷⚔️🖤🔥 -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-    <!-- 🥷⚔️🖤🔥 START: HTML CONTENT 🥷⚔️🖤🔥 -->
     <header>
         <div class="container">
-            <div class="logo">قوطنيل <span>- فرع أسيوط</span></div>
+            <div class="logo">قطونيل <span>- فرع أسيوط</span></div>
             <nav class="main-nav">
                 <ul>
                     <li><a href="#hero">الرئيسية</a></li>
@@ -25,9 +23,11 @@
             <div class="hamburger" id="menu-toggle"><div class="line"></div><div class="line"></div><div class="line"></div></div>
         </div>
     </header>
+    
     <nav class="mobile-nav" id="mobile-menu">
         <ul><li><a href="#hero">الرئيسية</a></li><li><a href="#products">المنتجات</a></li><li><a href="#contact">تواصل معنا</a></li></ul>
     </nav>
+
     <main>
         <section id="hero">
             <div id="hero-bg"></div>
@@ -42,11 +42,27 @@
             <div class="container">
                 <h2 class="reveal">صُنعت لراحتك</h2>
                 
-                <!--! Filter buttons will be populated by JavaScript -->
-                <div class="filter-buttons reveal"></div>
+                <!-- NEW: Search and Filter controls container -->
+                <div class="controls-container reveal">
+                    <input type="search" id="search-input" placeholder="ابحث عن منتج بالاسم..." aria-label="ابحث عن منتج">
+                    <div class="filter-buttons">
+                        <!-- Filter buttons will be populated by JavaScript -->
+                    </div>
+                </div>
                 
-                <!--! Product gallery will be populated by JavaScript -->
-                <div class="product-gallery"></div>
+                <!-- Product gallery for items WITH images -->
+                <div class="product-gallery">
+                    <!-- Products with images will be populated here by JavaScript -->
+                </div>
+
+                <!-- NEW: Section for products WITHOUT images -->
+                <div class="no-image-products-section" id="no-image-section" style="display: none;">
+                    <h2 class="reveal">منتجات إضافية</h2>
+                    <div class="no-image-gallery">
+                        <!-- Products without images will be populated here by JavaScript -->
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -55,12 +71,12 @@
                 <h2 class="reveal">نحن في انتظارك</h2>
                 <div class="contact-content">
                     <div class="contact-info">
-                        <p><i class="fas fa-phone"></i> 01012345678 - 0881234567</p>
-                        <p><i class="fas fa-clock"></i> يوميًا: 10 صباحًا - 11 مساءً</p>
-                        <p><i class="fas fa-map-marker-alt"></i> شارع الجمهورية، أسيوط، مصر</p>
+                        <p><i class="fas fa-phone"></i> 01270483365 - 0882071432</p>
+                        <p><i class="fas fa-clock"></i> يوميًا: 11 صباحًا - 12 مساءً</p>
+                        <p><i class="fas fa-map-marker-alt"></i> أبراج النصر/ برج 2أ  - أمام مديرية الصحه - الأزهر</p>
                     </div>
                     <div class="social-icons">
-                        <a href="https://wa.me/201012345678?text=مرحباً،%20لدي%20استفسار%20بخصوص%20منتجاتكم" target="_blank" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://wa.me/201270483365?text=مرحباً،%20لدي%20استفسار%20بخصوص%20منتجاتكم" target="_blank" title="واتساب"><i class="fab fa-whatsapp"></i></a>
                         <a href="#" target="_blank" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" target="_blank" title="انستجرام"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -68,11 +84,12 @@
             </div>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2024 قوطنيل - فرع أسيوط. تم التصميم والتطوير بحب وشغف 🔥</p>
+        <p>© 2025 قطونيل - فرع أسيوط. تم التصميم والتطوير بحب وشغف 🔥</p>
     </footer>
 
-    <!-- 🥷⚔️🖤🔥 START: FULLY AUTOMATED JAVASCRIPT LOGIC 🥷⚔️🖤🔥 -->
+    <!-- SCRIPT LOADING ORDER IS IMPORTANT: DATA FIRST, THEN LOGIC -->
     <script src="js/products.js"></script>
     <script src="js/main.js"></script>
 </body>
